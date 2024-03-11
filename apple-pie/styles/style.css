@@ -2,7 +2,7 @@
 /* Reset default browser styles and provide a consistent starting point */
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 30px;
 }
 
 *, *:before, *:after {
@@ -10,8 +10,8 @@ html {
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin: 0;
-  padding: 0;
+  margin: 30;
+  padding: 30;
   font-weight: lighter;
 }
 
@@ -19,6 +19,69 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 body {
   font-family: "Helvetica", sans-serif;
 }
+header{
+  margin-bottom: 96px ;
+}
 
 /* STYLES */
 /* Write your CSS below */
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: #fff; 
+  padding: 10px 20px; 
+  font-size: 80px; 
+  text-align: center;
+  }
+
+  .center {
+    text-align: justify;
+    display: block;
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+  .center-image{
+    display: flex;
+    justify-content: center;
+    margin: 32px 0;
+  }
+  
+  .center-justified {
+    text-align: justify;
+    margin: 0 auto;
+    width: 70em;
+  }
+
+  ul { list-style-type: "- "; }
+  ol.custom-list-style {
+    counter-reset: custom-counter;
+    list-style-type: none; 
+    padding-left: 0; 
+  }
+  ol.custom-list-style li {
+    counter-increment: custom-counter; 
+    position: relative; 
+    padding-left: 40px; 
+  }
+  ol.custom-list-style li::before {
+    content: counter(custom-counter) ") "; 
+    position: absolute;
+    left: 0; 
+  }
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
